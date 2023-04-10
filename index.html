@@ -444,8 +444,9 @@
                body: data,
                mode: 'no-cors'
             })
-            .then((response) => response.json())
-            .then((responseData) => {
+            .then((response) => response.text())
+            .then((rData) => {
+               responseData = JSON.parse(rData);
                alert(responseData.mensaje);
                if (responseData.exito==="SI") {
                   document.getElementById("nombres").value = "";
