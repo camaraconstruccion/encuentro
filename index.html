@@ -401,7 +401,7 @@
             data.append("conf08",  (document.getElementById("conf08").checked) ? "SI": "NO");
             data.append("conf09",  (document.getElementById("conf09").checked) ? "SI": "NO");
             data.append("conf10",  (document.getElementById("conf10").checked) ? "SI": "NO");
-
+            /*
             var xmlhttp = new XMLHttpRequest();
 				xmlhttp.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
@@ -437,43 +437,43 @@
 				};
 				xmlhttp.open("POST", URL, true);
 				xmlhttp.send(data);
+            */
 
-
-            // fetch(URL, {
-            //    method: 'POST',
-            //    body: data,
-            //    mode: 'no-cors'
-            // })
-            // .then((response) => { console.log(response); response.json(); })
-            // .then((responseData) => {
-            //    alert(responseData.mensaje);
-            //    if (responseData.exito==="SI") {
-            //       document.getElementById("nombres").value = "";
-            //       document.getElementById("apellidos").value = "";
-            //       document.getElementById("profesion").value = "";
-            //       document.getElementById("empresa").value = "";
-            //       document.getElementById("telefono").value = "";
-            //       document.getElementById("correo").value = "";
-            //       // document.getElementById("estado").value = "";
-            //       // document.getElementById("pais").value = "";
-            //       document.getElementById("cantidad").value = "1";
-            //       // document.getElementById("sector").value = "ninguno";
-            //       // document.getElementById("camara").value = "";
-            //       document.getElementById("conf01").checked = false;
-            //       document.getElementById("conf02").checked = false;
-            //       document.getElementById("conf03").checked = false;
-            //       document.getElementById("conf04").checked = false;
-            //       document.getElementById("conf05").checked = false;
-            //       document.getElementById("conf06").checked = false;
-            //       document.getElementById("conf07").checked = false;
-            //       document.getElementById("conf08").checked = false;
-            //       document.getElementById("conf09").checked = false;
-            //       document.getElementById("conf10").checked = false;
-            //       document.getElementById("btnenviar").disabled = false;
-            //    } else {
-            //       document.getElementById("btnenviar").disabled = false;
-            //    }
-            // });
+            fetch(URL, {
+               method: 'POST',
+               body: data,
+               mode: 'no-cors'
+            })
+            .then((response) => { console.log(response); response.json(); })
+            .then((responseData) => {
+               alert(responseData.mensaje);
+               if (responseData.exito==="SI") {
+                  document.getElementById("nombres").value = "";
+                  document.getElementById("apellidos").value = "";
+                  document.getElementById("profesion").value = "";
+                  document.getElementById("empresa").value = "";
+                  document.getElementById("telefono").value = "";
+                  document.getElementById("correo").value = "";
+                  // document.getElementById("estado").value = "";
+                  // document.getElementById("pais").value = "";
+                  document.getElementById("cantidad").value = "1";
+                  // document.getElementById("sector").value = "ninguno";
+                  // document.getElementById("camara").value = "";
+                  document.getElementById("conf01").checked = false;
+                  document.getElementById("conf02").checked = false;
+                  document.getElementById("conf03").checked = false;
+                  document.getElementById("conf04").checked = false;
+                  document.getElementById("conf05").checked = false;
+                  document.getElementById("conf06").checked = false;
+                  document.getElementById("conf07").checked = false;
+                  document.getElementById("conf08").checked = false;
+                  document.getElementById("conf09").checked = false;
+                  document.getElementById("conf10").checked = false;
+                  document.getElementById("btnenviar").disabled = false;
+               } else {
+                  document.getElementById("btnenviar").disabled = false;
+               }
+            });
          }
       }
    </script>
