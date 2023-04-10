@@ -442,7 +442,7 @@
             fetch(URL, {
                method: 'POST',
                body: data,
-               mode: 'no-cors'
+               mode: 'cors'
             })
             .then((response) => response.json())
             .then((responseData) => {
