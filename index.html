@@ -444,9 +444,8 @@
                body: data,
                mode: 'no-cors'
             })
-            .then((response) => response.text())
-            .then((rData) => {
-               responseData = JSON.parse(rData);
+            .then((response) => response.json())
+            .then((responseData) => {
                alert(responseData.mensaje);
                if (responseData.exito==="SI") {
                   document.getElementById("nombres").value = "";
@@ -475,7 +474,8 @@
                } else {
                   document.getElementById("btnenviar").disabled = false;
                }
-            });
+            })
+            .catch(err => console.log(err));
          }
       }
    </script>
