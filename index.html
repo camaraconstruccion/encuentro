@@ -404,7 +404,8 @@
             
             fetch(URL, {
                method: 'POST',
-               body: data
+               body: data,
+               mode: 'nocors'
             })
             .then((response) => response.json())
             .then((responseData) => {
