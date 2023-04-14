@@ -241,7 +241,7 @@
             .then((response) => response.json())
             .then((responseData) => {
                if (responseData.exito==="SI") {
-                  if (responseData.conf01<=40) {
+                  if (responseData.conf01<=20) {
                      document.getElementById("div-conf01").style.display = 'flex';
                   }
                   if (responseData.conf02<=60) {
