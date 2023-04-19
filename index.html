@@ -153,7 +153,7 @@
                   <input id="camara" type="text" value="" style="width: 50%;">
                </div> -->
 
-               <div class="campos" style="width: 100%; margin-bottom: 10px; display: flex;">
+               <div id="tituloconferencias" class="campos" style="width: 100%; margin-bottom: 10px; display: none;">
                   <div style="width: 100%; text-align: center; font-size: 110%;">
                      <label for=""><b>Inscripción en conferencias</b></label>
                   </div>
@@ -241,35 +241,49 @@
             .then((response) => response.json())
             .then((responseData) => {
                if (responseData.exito==="SI") {
+                  muestra = 0;
                   if (responseData.conf01<=20) {
                      document.getElementById("div-conf01").style.display = 'flex';
+                     muestra++;
                   }
                   if (responseData.conf02<=60) {
                      document.getElementById("div-conf02").style.display = 'flex';
+                     muestra++;
                   }
                   if (responseData.conf03<=60) {
                      document.getElementById("div-conf03").style.display = 'flex';
+                     muestra++;
                   }
                   if (responseData.conf04<=60) {
                      document.getElementById("div-conf04").style.display = 'flex';
+                     muestra++;
                   }
                   if (responseData.conf05<=60) {
                      document.getElementById("div-conf05").style.display = 'flex';
+                     muestra++;
                   }
                   if (responseData.conf06<=60) {
                      document.getElementById("div-conf06").style.display = 'flex';
+                     muestra++;
                   }
                   if (responseData.conf07<=60) {
                      document.getElementById("div-conf07").style.display = 'flex';
+                     muestra++;
                   }
                   if (responseData.conf08<=60) {
                      document.getElementById("div-conf08").style.display = 'flex';
+                     muestra++;
                   }
                   if (responseData.conf09<=60) {
                      document.getElementById("div-conf09").style.display = 'flex';
+                     muestra++;
                   }
                   if (responseData.conf10<=60) {
                      document.getElementById("div-conf10").style.display = 'flex';
+                     muestra++;
+                  }
+                  if (muestra>0) {
+                     document.getElementById("tituloconferencias").style.display = 'flex';
                   }
                }
             })
