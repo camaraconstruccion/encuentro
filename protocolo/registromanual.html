@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Expo Fedecámaras Carabobo 2022</title>
+		<title>Encuentro de constructores Abril 2023</title>
 		<link rel="icon" type="image/ico" href="favicon.ico">
 		<link rel="stylesheet" href="./css/estilos2.css">
 		<script type="text/javascript" src="./js/funciones.js"></script>
@@ -12,7 +12,7 @@
 	<body onload="inicio()">
 		<div id="container">
 			<div class="logo" align="center">
-				<img id="logo" src="./img/expologo.png" alt="" />
+				<img id="logo" src="./img/expologo.jpg" alt="" />
 			</div>
 			<h2>Registro de asistentes</h2>
 			<div id="div1" align="center">
@@ -40,14 +40,14 @@
 					<span class="etiq">Correo electrónico:</span>
 					<input id="correo" class="campo" type="text" size="50" maxlength="100" placeholder="email@email.com" onchange="validaemail(this.id,this.value)" />
 				</div>
-				<div id="div0" class="cmps">
+				<!-- <div id="div0" class="cmps">
 					<span class="etiq">Estado:</span>
 					<input id="estado" class="campo" type="text" size="50" maxlength="100" />
 				</div>
 				<div id="div0" class="cmps">
 					<span class="etiq">País:</span>
 					<input id="pais" class="campo" type="text" size="50" maxlength="100" />
-				</div>
+				</div> -->
 				<div id="div0" class="cmps">
 					<span class="etiq">Cant de personas:</span>
 					<input id="cantidad" class="campo" type="number" min="1" value="1" placeholder="1" />
@@ -55,7 +55,7 @@
                   document.getElementById("cantidad").value = 1;
                </script>
             </div>
-				<div id="div0" class="cmps">
+				<!-- <div id="div0" class="cmps">
 					<span class="etiq">Sector:</span>
                <select id="sector" class="campo" type="text">
                   <option value="ninguno">Seleccione</option>
@@ -75,7 +75,7 @@
 				<div id="div0" class="cmps">
 					<span class="etiq">Cámara:</span>
 					<input id="camara" class="campo" type="text" size="50" maxlength="100" />
-				</div>
+				</div> -->
             <!-- Linea de botones -->
 				<div class="btns">
                <button id="btnenviar" style="width: 7em;" onclick="enviar()">Enviar</button>
@@ -85,7 +85,7 @@
 		</div>
 		<script>
 			xsalir = localStorage.getItem("url_bck2");
-         const URL = 'https://app.cash-flag.com/apis/expo/visitantesmanual';
+         const URL = 'https://app.cash-flag.com/apis/expo/constructoresmanual';
          const operador = localStorage.getItem("nombre");
          const dia      = localStorage.getItem("dia");
 
@@ -96,11 +96,11 @@
             document.getElementById("empresa").value = "";
             document.getElementById("telefono").value = "";
             document.getElementById("correo").value = "";
-            document.getElementById("estado").value = "";
-            document.getElementById("pais").value = "";
+            // document.getElementById("estado").value = "";
+            // document.getElementById("pais").value = "";
             document.getElementById("cantidad").value = "1";
-            document.getElementById("sector").value = "ninguno";
-            document.getElementById("camara").value = "";
+            // document.getElementById("sector").value = "ninguno";
+            // document.getElementById("camara").value = "";
             document.getElementById("btnenviar").disabled = false;
          }
 
@@ -246,11 +246,11 @@
                data.append("empresa",   document.getElementById("empresa").value);
                data.append("telefono",  document.getElementById("telefono").value);
                data.append("correo",    document.getElementById("correo").value);
-               data.append("estado",    document.getElementById("estado").value);
-               data.append("pais",      document.getElementById("pais").value);
+               // data.append("estado",    document.getElementById("estado").value);
+               // data.append("pais",      document.getElementById("pais").value);
                data.append("cantidad",  document.getElementById("cantidad").value);
-               data.append("sector",    document.getElementById("sector").value);
-               data.append("camara",    document.getElementById("camara").value);
+               // data.append("sector",    document.getElementById("sector").value);
+               // data.append("camara",    document.getElementById("camara").value);
                data.append("operador",  operador);
                data.append("dia",       dia);
                
@@ -268,11 +268,11 @@
                      document.getElementById("empresa").value = "";
                      document.getElementById("telefono").value = "";
                      document.getElementById("correo").value = "";
-                     document.getElementById("estado").value = "";
-                     document.getElementById("pais").value = "";
+                     // document.getElementById("estado").value = "";
+                     // document.getElementById("pais").value = "";
                      document.getElementById("cantidad").value = "1";
-                     document.getElementById("sector").value = "ninguno";
-                     document.getElementById("camara").value = "";
+                     // document.getElementById("sector").value = "ninguno";
+                     // document.getElementById("camara").value = "";
                      document.getElementById("btnenviar").disabled = false;
                   } else {
                      document.getElementById("btnenviar").disabled = false;

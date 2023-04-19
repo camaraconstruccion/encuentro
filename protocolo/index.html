@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Expo Fedecámaras Carabobo 2022</title>
+		<title>Encuentro de constructores Abril 2023</title>
 		<link rel="icon" type="image/ico" href="favicon.ico">
 		<link rel="stylesheet" href="./css/estilos2.css">
 		<script type="text/javascript" src="./js/funciones.js"></script>
@@ -12,7 +12,7 @@
 	<body onload="inicio()">
 		<div id="container">
 			<div class="logo" align="center">
-				<img id="logo" src="./img/expologo.png" alt="" />
+				<img id="logo" src="./img/expologo.jpg" alt="" />
 			</div>
 			<h2>Registro de asistentes</h2>
 			<div id="div1" align="center">
@@ -24,10 +24,10 @@
 				<div id="div2" class="cmps">
 					<span class="etiq">Día:</span>
                <select class="campo" id="dia">
-                  <option value="0">Seleccione</option>
-                  <option value="1">Viernes 27</option>
-                  <option value="2">Sábado 28</option>
-                  <option value="3">Domingo 29</option>
+                  <!-- <option value="0">Seleccione</option> -->
+                  <option value="1">Jueves 20</option>
+                  <!-- <option value="2">Sábado 28</option>
+                  <option value="3">Domingo 29</option> -->
                </select>
 				</div>
 				<!-- Linea de botones -->
@@ -41,9 +41,9 @@
 
 			function inicio() {
 				nombre = "";
-				dia = 0;
+				dia = 1;
 				document.getElementById("nombre").value = "";
-				document.getElementById("dia").value = 0;
+				document.getElementById("dia").value = 1;
 				document.getElementById("login").style.display = 'inline-block';
 				localStorage.setItem("url_back",window.location);				
 			}
